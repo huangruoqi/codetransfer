@@ -1,0 +1,40 @@
+#copy-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 7px;
+  background-color: #1f4287;
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  opacity: 0;
+}
+
+#copy-button:hover {
+  background-color: #1f428790;
+}
+
+.code-wrapper:hover #copy-button {
+  opacity: 1;
+}
+
+#copy-success {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1f4287;
+  color: white;
+  padding: 16px 32px;
+  font-size: 24px;
+  border-radius: 5px;
+  display: none;
+}
+
+#copy-success.show-message {
+  display: inline-block;
+}
+
