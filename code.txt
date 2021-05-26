@@ -9,8 +9,8 @@ public class cs3310hw1 {
        int result = 0;
        int max = arr[result];
        int sum = max;
-       for (int i = 1;i<n;++i) {
-           sum += arr[i];
+       for (int i = 1;i<n;  i) {
+           sum  = arr[i];
            if (sum>max) {
                max = sum;
                result = i;
