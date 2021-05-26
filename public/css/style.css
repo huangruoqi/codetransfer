@@ -6,7 +6,7 @@
   background-color: #7a9dbf;
   border: none;
   outline: none;
-  color: white;
+  color: black;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.2s ease-in;
@@ -14,7 +14,7 @@
 }
 
 #copy-button:hover {
-  background-color: #1f428790;
+  background-color: #7a9dbf50;
 }
 
 .code-wrapper:hover #copy-button {
