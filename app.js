@@ -22,6 +22,7 @@ app.post('/refresh', (req, res) => {
 })
 
 app.post('/ppp', (req, res) => {
+    console.log(req);
     if (req.body) {
         fs.writeFile('./code.txt', req.body.code, 'utf-8', (err) => {
             res.send('success');
