@@ -11,17 +11,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const codeBlock = document.getElementById('code');
     const copyButton = document.getElementById('copyButton');
     const copySuccess = document.getElementById('copySuccess');
-    const copyTextHandler = () => {
-        const text = codeBlock.innerText;
+    const copytexthandler = () => {
+        const text = codeblock.innertext;
         navigator.clipboard.writeText(text).then{
             () => {
-                copySuccess.classList.add('show-message');
-                setTimeout(() => {
-                    copySuccess.classList.remove('show-message');
+                copysuccess.classlist.add('show-message');
+                settimeout(() => {
+                    copysuccess.classlist.remove('show-message');
                 }, 2500);
-            },
-            () => {
-                console.log('Error writing to the clipboard');
             }
         }
     }
