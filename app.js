@@ -12,7 +12,7 @@ app.set('view engine', 'pug');
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/',(req, res) => {
-    fs.readFile('./cs3310hw1.java', 'utf-8', (err, data)=> {
+    fs.readFile('./code.txt', 'utf-8', (err, data)=> {
         res.render('index', { code:data} );
     })
 })
@@ -22,10 +22,9 @@ app.post('/refresh', (req, res) => {
 })
 
 app.post('/ppp', (req, res) => {
-    // Get string from req.code
-    console.log(req.body.code);
-    res.send('success');
-    // Save code to mongodb
+    fs.writeFile('./code.txt', req.body.code, 'utf-8', (err) => {
+        res.send('success');
+    })
 })
 
 app.listen(process.env.PORT || 3000, () => {
