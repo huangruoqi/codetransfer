@@ -7,5 +7,5 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.location.reload();
             }
         });
-    }, 5000)
+    }, 2500);
 })
