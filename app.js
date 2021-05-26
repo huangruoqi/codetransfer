@@ -1,17 +1,6 @@
 const express = require('express');
-const mongoose = require('mongoose');
 const path = require('path');
-const Code = require('./modules/code');
 const fs = require('fs');
-const html2pug = require('html2pug');
-const hljs = require('highlight.js');
-
-mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/nodekb', {
-    useNewUrlParser: true,
-    useUnifiedTopology:true
-});
-
-const db = mongoose.connection;
 
 var isRefreshed = false;
 
@@ -24,17 +13,18 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/',(req, res) => {
     fs.readFile('./cs3310hw1.java', 'utf-8', (err, data)=> {
-            res.render('index', { code:data} );
+        res.render('index', { code:data} );
     })
 })
 
-app.get('/refresh', (req, res) => {
+app.post('/refresh', (req, res) => {
 
 })
 
-app.post('/', (req, res) => {
+app.post('/ppp', (req, res) => {
     // Get string from req.code
-
+    console.log(req.body.code);
+    res.send('success');
     // Save code to mongodb
 })
 
