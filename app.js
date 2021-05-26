@@ -22,9 +22,14 @@ app.post('/refresh', (req, res) => {
 })
 
 app.post('/ppp', (req, res) => {
-    fs.writeFile('./code.txt', req.body.code, 'utf-8', (err) => {
-        res.send('success');
-    })
+    if (req.body) {
+        fs.writeFile('./code.txt', req.body.code, 'utf-8', (err) => {
+            res.send('success');
+        })
+    }
+    else {
+        res.send('failed');
+    }
 })
 
 app.listen(process.env.PORT || 3000, () => {

@@ -10,7 +10,7 @@ public class JavaPostRequest {
 
     public static void main(String[] args) throws IOException {
 
-        String url = "http://localhost:3000/ppp";
+        String url = "https://codetransfer.herokuapp.com/ppp";
         
         String urlParameters = "code=sdfsd";//+takeDataFromFile(args[0]);
         byte[] postData = urlParameters.getBytes(StandardCharsets.UTF_8);
