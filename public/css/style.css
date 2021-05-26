@@ -3,7 +3,7 @@
   top: 8px;
   right: 8px;
   padding: 7px;
-  background-color: #7a9dbf;
+  background-color: #6a8daf;
   border: none;
   outline: none;
   color: black;
@@ -14,7 +14,7 @@
 }
 
 #copy-button:hover {
-  background-color: #7a9dbf50;
+  background-color: #6a8daf50;
 }
 
 .code-wrapper:hover #copy-button {
