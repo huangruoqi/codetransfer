@@ -1,0 +1,20 @@
+doctype html
+html
+    head
+        title Code Transfer
+        link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css')
+        link(rel='stylesheet' href='/css/style.css')
+        link(rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css')
+    body(style='background:#777777')
+        nav.navbar.navbar-expand-lg.navbar-dark.bg-dark(style='height:10%;' aria-label='first navbar example')
+            .container-fluid
+                a.navbar-brand(href='#') Code Transfer
+        .code-wrapper(style='display:none;overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:87%;width:92%;position:absolute;top:13%;left:4%;right:4%;bottom:0px' height='100%' width='100%')
+            pre
+                code#code
+                    |#{code}
+    script(src='/bower_components/jquery/dist/jquery.js')
+    script(src='/bower_components/bootstrap/dist/js/bootstrap.js')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js')
+    script(src='/js/main.js' defer)
+

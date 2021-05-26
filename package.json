@@ -1,0 +1,19 @@
+{
+  "name": "codetransfer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "Ruoqi Huang",
+  "license": "ISC",
+  "dependencies": {
+    "escape-html": "^1.0.3",
+    "express": "^4.17.1",
+    "highlight.js": "^10.7.2",
+    "html2pug": "^4.0.0",
+    "mongoose": "^5.12.11",
+    "pug": "^3.0.2"
+  }
+}
