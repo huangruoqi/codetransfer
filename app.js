@@ -17,11 +17,16 @@ app.use(bodyParser.json());
 app.get('/',(req, res) => {
     isRefreshed = false;
     fs.readFile('./code.txt', 'utf-8', (err, data)=> {
-        res.render('index', { code:data } );
+        res.render('index', { 
+            code:data,
+            showUpload: true
+        } );
     })
 })
 app.get('/upload', (req, res) => {
-    res.render('upload');
+    res.render('upload', {
+        showUpload: false
+    });
 })
 
 app.post('/', (req, res) => {

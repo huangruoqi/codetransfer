@@ -1,13 +1,43 @@
 extends layout
 
 block content
-    br
-    form(method='POST', action='/upload/input')
-        .container
-            h1 Upload Code:
-            #form-group
-                pre
-                    code
-                        textarea.form-control(spellcheck='false' name='code' width="100%" min-height="25em") 
-            br
-            input.btn.btn-primary(type='submit',value='submit')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js')
+    style(type='text/css' media='screen').
+        body {
+        overflow: hidden;
+        }
+        #editor {
+        margin: 0;
+        position: absolute;
+        top: 60px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+            }
+        #upload-button {
+        position: absolute;
+        top: 68px;
+        right: 23px;
+        padding: 7px;
+        background-color: #6a8daf;
+        border: none;
+        outline: none;
+        color: black;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.2s ease-in;
+        }
+
+        #upload-button:hover {
+        background-color: #6a8daf50;
+        }
+    pre#editor
+    button#upload-button upload
+
+    script.
+      var editor = ace.edit("editor");
+      editor.setTheme("ace/theme/twilight");
+      editor.session.setMode("ace/mode/javascript");
+      editor.setFontSize(25);
+      editor.setShowPrintMargin(false);
+      
