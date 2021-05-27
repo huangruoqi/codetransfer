@@ -42,3 +42,10 @@ textarea.form-control {
     min-height: 25em;
 }
  
+code.cpp {
+    min-height: 5em;
+}
+
+code.nginx {
+    min-height: 5em;
+}
