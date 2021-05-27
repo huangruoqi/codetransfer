@@ -1,7 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
     setInterval(()=> {
         const languages = ['java', 'javascript', 'python'];
-        console.log(hljs.highlightAuto(editor.getValue(), languages));
+        const lang = hljs.highlightAuto(editor.getValue(), languages).language;
+        if (lang) {
+            editor.session.setMode("ace/mode/"+lang);
+        }
+        else {
+            editor.session.setMode("ace/mode/java");
+        }
+
     }, 2500)
     document.getElementById('upload-button').addEventListener('click', () => {
         console.log(editor.getValue())
