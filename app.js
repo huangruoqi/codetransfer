@@ -51,6 +51,7 @@ app.post('/upload', (req, res) => {
 })
 
 app.post('/upload/input', (req, res) => {
+    console.log(req.body)
     fs.writeFile('./code.txt', req.body.code, 'utf-8', (err) => {
         isRefreshed = true;
         res.redirect('/')
