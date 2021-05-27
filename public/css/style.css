@@ -38,3 +38,7 @@
   display: inline-block;
 }
 
+textarea.form-control {
+    min-height: 25em;
+}
+ 
