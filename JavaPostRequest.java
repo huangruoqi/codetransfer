@@ -35,8 +35,7 @@ public class JavaPostRequest {
                     content.append(System.lineSeparator());
                 }
             }
-            if (content.toString().length()==0) {content.append("success");}
-            System.out.println(content.toString());
+            System.out.print(content.toString());
         } finally {
             con.disconnect();
         }

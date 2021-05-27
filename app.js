@@ -37,12 +37,19 @@ app.post('/upload', (req, res) => {
     if (req.body.code) {
         fs.writeFile('./code.txt', req.body.code, 'utf-8', (err) => {
             isRefreshed = true;
-            res.redirect('/')
+            res.send('success')
         })
     }
     else {
         res.send('failed');
     }
+})
+
+app.post('/upload/input', (req, res) => {
+    fs.writeFile('./code.txt', req.body.code, 'utf-8', (err) => {
+        isRefreshed = true;
+        res.redirect('/')
+    })
 })
 
 app.listen(process.env.PORT || 3000, () => {
