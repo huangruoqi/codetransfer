@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
             editor.session.setMode("ace/mode/java");
         }
 
-    }, 1)
+    }, 400)
     document.getElementById('upload-button').addEventListener('click', () => {
         console.log(editor.getValue())
         let body = {
