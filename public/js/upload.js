@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         fetch('https://codetransfer.herokuapp.com/upload/input', {
             method: 'POST', 
-            body: JSON.stringify(code)
+            body: JSON.stringify(body)
         }).then(res => {
             if (res.redirected) {
                 window.location.href = '/';
