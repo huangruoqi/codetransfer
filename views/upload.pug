@@ -6,6 +6,8 @@ block content
         .container
             h1 Upload Code:
             #form-group
-                textarea.form-control(spellcheck='false' name='code' width="100%" min-height="25em") 
+                pre
+                    code
+                        textarea.form-control(spellcheck='false' name='code' width="100%" min-height="25em") 
             br
             input.btn.btn-primary(type='submit',value='submit')
