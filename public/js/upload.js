@@ -4,12 +4,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const lang = hljs.highlightAuto(editor.getValue(), languages).language;
         if (lang) {
             editor.session.setMode("ace/mode/"+lang);
+            console.log(lang);
         }
         else {
             editor.session.setMode("ace/mode/java");
         }
 
-    }, 2500)
+    }, 1)
     document.getElementById('upload-button').addEventListener('click', () => {
         console.log(editor.getValue())
         let body = {
