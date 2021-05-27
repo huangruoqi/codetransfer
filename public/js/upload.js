@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         fetch('https://codetransfer.herokuapp.com/upload/input', {
             method: 'POST', 
-            body: JSON.stringify(body)
+            body: JSON.stringify(body),
+            headers: { 'Content-Type': 'application/json' }
         }).then(res => {
             if (res.redirected) {
                 window.location.href = '/';
