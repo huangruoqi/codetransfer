@@ -49,3 +49,6 @@ code.cpp {
 code.nginx {
     min-height: 5em;
 }
+code#code.hljs {
+    min-height: 5em;
+}
