@@ -1,4 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
+    setInterval(()=> {
+        const languages = ['java', 'javascript', 'python'];
+        console.log(hljs.highlightAuto(editor.getValue(), languages));
+    }, 2500)
     document.getElementById('upload-button').addEventListener('click', () => {
         console.log(editor.getValue())
         let body = {
