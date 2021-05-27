@@ -15,16 +15,18 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
 app.get('/',(req, res) => {
-    console.log('get');
+    isRefreshed = false;
     fs.readFile('./code.txt', 'utf-8', (err, data)=> {
         res.render('index', { code:data } );
     })
+})
+app.get('/upload', (req, res) => {
+    res.render('upload');
 })
 
 app.post('/', (req, res) => {
     if(isRefreshed) {
         res.redirect('/');
-        isRefreshed = false;
     }
     else {
         res.send();
@@ -34,8 +36,8 @@ app.post('/', (req, res) => {
 app.post('/upload', (req, res) => {
     if (req.body.code) {
         fs.writeFile('./code.txt', req.body.code, 'utf-8', (err) => {
-            res.send('success');
             isRefreshed = true;
+            res.redirect('/')
         })
     }
     else {
