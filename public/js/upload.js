@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('upload-button').addEventListener('click', () => {
+        console.log(editor.getValue())
         let body = {
             code: editor.getValue()
         }
