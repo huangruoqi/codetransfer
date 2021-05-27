@@ -35,7 +35,7 @@ block content
     button#upload-button upload
 
     script.
-      var editor = ace.edit("editor");
+      var editor = ace.edit("editor", { useWorker:false });
       editor.setTheme("ace/theme/twilight");
       editor.session.setMode("ace/mode/javascript");
       editor.setFontSize(25);
