@@ -38,7 +38,7 @@ app.post('/', (req, res) => {
     }
 })
 
-app.post('/upload', (req, res) => {
+app.post('/upload/file', (req, res) => {
     if (req.body.code) {
         fs.writeFile('./code.txt', req.body.code, 'utf-8', (err) => {
             isRefreshed = true;
