@@ -18,8 +18,6 @@
     "bower": "^1.8.12",
     "express": "^4.17.1",
     "node-fetch": "^2.6.1",
-    "programming-language-detector": "^1.0.4",
-    "pug": "^3.0.2",
-    "xmlhttprequest": "^1.8.0"
+    "pug": "^3.0.2"
   }
 }
