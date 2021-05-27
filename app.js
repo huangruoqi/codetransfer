@@ -41,7 +41,7 @@ app.post('/upload', (req, res) => {
         })
     }
     else {
-        res.send('failed');
+        res.status(500).send('failed');
     }
 })
 
